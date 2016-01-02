@@ -1,5 +1,5 @@
 #file: ~/.bashrc
-#author: Ypnose - http://tetedulinuxien.fr
+#author: crowd42
 
 # text editor par défaut
 export EDITOR="vim"
