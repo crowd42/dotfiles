@@ -7,7 +7,6 @@ exec --no-startup-id i3-msg restart
 
 # Run startup applications 
 exec setxkbmap fr oss
-exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id xfce4-notifyd
 exec --no-startup-id xfce4-volumed
@@ -15,11 +14,6 @@ exec --no-startup-id numlockx
 exec --no-startup-id redshift-gtk
 exec --no-startup-id compton -b -f --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay --config ~/.config/compton.conf
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id xrdb -load ~/.Xresources
-exec --no-startup-id xfconf-query -c xsettings -p /Xft/Antialias -n -t int -s 1
-exec --no-startup-id xfconf-query -c xsettings -p /Xft/Lcdfilter -n -t string -s lcddefault
-
-
 #bindsym XF86AudioRaiseVolume exec amixer -q set Master 3dB+ unmute
 #bindsym XF86AudioLowerVolume exec amixer -q set Master 3dB- unmute
 #bindsym XF86AudioMute exec amixer -q set Master toggle
@@ -235,5 +229,9 @@ client.focused				#9fbc00 #9fbc00 #111111
 client.unfocused			#505E00 #505E00 #cccccc
 client.focused_inactive			#315858 #315858 #cccccc
 client.urgent				#383a3b #383a3b #cccccc
+
+exec --no-startup-id xrdb -load ~/.Xresources
+exec --no-startup-id xfconf-query -c xsettings -p /Xft/Antialias -n -t int -s 1
+exec --no-startup-id xfconf-query -c xsettings -p /Xft/Lcdfilter -n -t string -s lcddefault
 
 
