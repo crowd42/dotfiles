@@ -15,7 +15,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id redshift-gtk
 exec --no-startup-id compton -b -f --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay --config ~/.config/compton.conf
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id xrdb -load ~/.Xresources
+exec --no-startup-id xrdb -load ~/..Xressources
 exec --no-startup-id xfconf-query -c xsettings -p /Xft/Antialias -n -t int -s 1
 exec --no-startup-id xfconf-query -c xsettings -p /Xft/Lcdfilter -n -t string -s lcddefault
 
@@ -29,6 +29,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Application shortcuts
 bindsym $mod+w exec qutebrowser
 bindsym $mod+f exec pcmanfm
+bindsym $mod+g exec gvim
+bindsym $mod+m exec smplayer
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 
 # Window arguments
@@ -38,20 +40,11 @@ for_window [class="lxappearance"] floating enable
 for_window [title="xfce4-volumed"] floating enable
 for_window [title="xfce4-notifyd"] floating enable
 for_window [title="Steam*"] floating enable
-for_window [title="Synergy"] floating enable
 for_window [title="xfce4-volumed"] border pixel 0
 for_window [title="xfce4-notifyd"] border pixel 0
 for_window [class="File-roller"] floating enable
-for_window [class="Battle.net.exe"] floating enable
-for_window [class="Skype"] floating enable
-for_window [class="gsimplecal"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-assign [class="Wow-64.exe"] 3|
-assign [class="Skype"] 6|
-assign [class="Hexchat"] 6|
-assign [title="Battle.net"] 6|
-assign [class="firefox"] 5|
 assign [title="Steam"] 8|
 
 # Set font
@@ -71,13 +64,13 @@ bindsym $mod+c kill
 bindsym $mod+r exec --no-startup-id dmenu_recency
 
 # launch categorized menu
-bindsym $mod+m exec --no-startup-id morc_menu
+bindsym $mod+Shift+m exec --no-startup-id morc_menu
 
 # Screenshots
-bindsym --release Print exec scrot /home/crowd42/Images/screenshot-$(date +%Y-%m-%d).png
-bindsym --release Shift+Print exec scrot -s /home/crowd42/Images/screenshot-$(date +%Y-%m-%d).png
+bindsym --release Print exec scrot /home/crowd42/Images/Screenshots/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png
+bindsym --release Shift+Print exec scrot -s /home/crowd42/Images//Screenshots/screenshot-$(date +%Y-%m-%d-%H-%M-%S).png
 
-# alternatively, you can use the cursor keys:
+# switch to focused window
 bindsym $mod+Shift+Left focus left
 bindsym $mod+Shift+Down focus down
 bindsym $mod+Shift+Up focus up
@@ -122,7 +115,7 @@ bindsym $mod+Shift+a focus parent
 bindsym $mod+Shift+d focus child
 
 # Workspace-monitor config
-workspace 1| output DP-1
+workspace 1| output DP-1
 workspace 2| output DP-1
 workspace 3| output DP-1
 workspace 4| output DVI-I-1
@@ -134,7 +127,7 @@ workspace 9| output DVI-I-1
 workspace 0| output DVI-I-1
 
 # switch to workspace
-bindsym $mod+1 workspace 1|
+bindsym $mod+1 workspace 1| 
 bindsym $mod+2 workspace 2|
 bindsym $mod+3 workspace 3|
 bindsym $mod+4 workspace 4|
@@ -146,7 +139,7 @@ bindsym $mod+9 workspace 9|
 bindsym $mod+0 workspace 0|
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1|
+bindsym $mod+Shift+1 move container to workspace 1| 
 bindsym $mod+Shift+2 move container to workspace 2|
 bindsym $mod+Shift+3 move container to workspace 3|
 bindsym $mod+Shift+4 move container to workspace 4|
